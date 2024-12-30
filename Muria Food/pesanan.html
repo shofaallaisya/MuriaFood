@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        
+        .navbar-brand, .nav-link {
+            color: #ff7f00 !important;
+        }
+        .nav-link:hover {
+            color: #ffd1a6 !important;
+        }
+        .container {
+            background-color: #ffffff;
+            
+        }
+        
+
+        .btn-btn-light-mb-3 {
+            color: #ff4400;
+        }
+        
+        .food-image {
+            width: 100%;
+            border-radius: 15px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .quantity-btn {
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .add-to-cart-btn {
+            background-color: #FF6B6B;
+            color: white;
+            width: 100%;
+            border-radius: 50px;
+            padding: 10px 0;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+
+    
+            
+    <div class="container mt-4">
+        <!-- Food Image -->
+        <div class="col-md-12 text-right">
+            <a href="menu.html" class="text-secondary"><i class="fas fa-chevron-left"></i> Kembali </a>
+        </div>
+        <div class="text-center mb-4">
+            <img src="https://th.bing.com/th/id/R.71ab253ec07414f90f9affae79050205?rik=KsI02qdqQAQArg&riu=http%3a%2f%2fimg.jakpost.net%2fc%2f2016%2f06%2f24%2f2016_06_24_7079_1466755385._large.jpg&ehk=UkFtC26sl7O7owcmWdDjNdprvBHLnT35M%2f%2bKR25rSHk%3d&risl=&pid=ImgRaw&r=0" alt="Nasi Goreng" class="food-image">
+                <i class="bi bi-heart"></i> <!-- Favorite icon placeholder -->
+            </button>
+        </div>
+
+        <!-- Food Details -->
+        <h4>Nasi Goreng</h4>
+        <div class="d-flex align-items-center mb-2">
+            <span class="text-warning">⭐ 4.5</span>
+            <span class="text-muted ms-2">(30+)</span>
+            <a href="review.html" class="ms-2 text-decoration-none">Lihat Ulasan</a>
+        </div>
+        
+        <h5 class="text-danger">Rp15.000</h5>
+        
+        <!-- Quantity Selection -->
+        <div class="d-flex justify">
+            <button class="quantity-btn" id="minus">-</button>
+            <span class="ml-3 mr-3" id="counter">00</span>
+            <button class="quantity-btn" id="plus">+</button>
+        </div>
+        
+        <!-- Food Description -->
+        <p>Pakai nasi dingin biar nggak lengket. Cincang bawang putih segar. Bumbu: bubuk cabai, jintan, dan bubuk bawang. Tambah kecap manis, garam, dan merica. Sajikan dengan telur atau kerupuk biar makin nikmat!</p>
+
+        <!-- Additional Menu Items -->
+        <h6>Menu Tambahan</h6>
+        <ul class="list-unstyled">
+            <li class="d-flex justify-content-between align-items-center mb-3">
+                <span>Es Teh</span>
+                <span class="text-muted"> +Rp5.000</span>
+                <div class="d-flex align-items-center">
+                    <span class="quantity-btn">-</span>
+                    <span class="mx-2">02</span>
+                    <span class="quantity-btn">+</span>
+                </div>
+            </li>
+            <li class="d-flex justify-content-between align-items-center mb-3">
+                <span>Sate Usus</span>
+                <span class="text-muted">+Rp2.000</span>
+                <div class="d-flex align-items-center">
+                    <span class="quantity-btn">-</span>
+                    <span class="mx-2">01</span>
+                    <span class="quantity-btn">+</span>
+                </div>
+            </li>
+            <li class="d-flex justify-content-between align-items-center mb-3">
+                <span>Sate Telur</span>
+                <span class="text-muted">+Rp2.000</span>
+                <div class="d-flex align-items-center">
+                    
+                        <button class="quantity-btn" id="minus">-</button>
+                        <span class="ml-3 mr-3" id="counter">00</span>
+                        <button class="quantity-btn" id="plus">+</button>
+                    
+                </div>
+            </li>
+        </ul>
+
+        <!-- Add to Cart Button -->
+        <a href="keranjang.html" class="btn add-to-cart-btn">Masukkan ke Keranjang</a>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        let counter = 0;
+        const counterElement = document.getElementById("counter");
+        const plusButton = document.getElementById("plus");
+        const minusButton = document.getElementById("minus");
+
+        plusButton.addEventListener('click', function() {
+            counter++;
+            counterElement.textContent = counter.toString().padStart(2, '0');
+        });
+
+        minusButton.addEventListener('click', function() {
+            if (counter > 0) {
+                counter--;
+                counterElement.textContent = counter.toString().padStart(2, '0');
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MuriaFood</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #fff6e5;
+        }
+        .navbar {
+            background-color: #ff7f00 !important;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #ffd1a6 !important;
+        }
+
+        .container {
+        background-color: #ffffff;
+        }
+        .navbar-brand, .nav-link {
+            color: #ff4400;
+        }
+
+        .category-btn {
+            background-color: #ffdab9;
+        }
+        .category-btn img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffa07a;
+        }
+        .category-btn p {
+            font-weight: bold;
+        }
+        .restaurant-card img {
+            border-radius: 10px;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .restaurant-card .card-body {
+            background-color: #ffe4b5;
+        }
+        .restaurant-card h6 {
+            color: #ff4400;
+            font-weight: bold;
+        }
+        .menu-item {
+            text-align: center;
+            padding: 10px;
+        }
+        .Dimsum, .MieAyam, .EsTeh, .Geprek {
+            background-color: #ffebcd;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">MuriaFood</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="menu.html">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="keranjang.html">Keranjang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lacak.html">Lacak Pesanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">Riwayat Pesanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="review.html">Review Pesanan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="akun.html">Akun</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Keluar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-4">
+
+        <!-- Header -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5>Mau makan apa ketua?</h5>
+            <div>
+                <img src="https://www.pngarts.com/files/5/User-Avatar-PNG-Download-Image.png" alt="User Avatar" class="rounded-circle" width="40">
+                <span class="fw-bold">Jurang RT05 RW03 Gebog Kudus</span>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="mb-4">
+            <input type="text" class="form-control" placeholder="Cari makanan atau restoran...">
+        </div>
+
+        <!-- Category Filters -->
+        <div class="d-flex justify-content-around mb-4">
+            <button class="btn category-btn">
+                <img src="https://th.bing.com/th/id/OIP.NzSXtxNWD57kCe_7JuxC4wHaE8?rs=1&pid=ImgDetMain" alt="Nasi">
+                <p>Nasi</p>
+            </button>
+            <button class="btn category-btn">
+                <img src="https://th.bing.com/th/id/OIP.qGa4C5uDGxMNhGg_L3MvfQHaE8?rs=1&pid=ImgDetMain" alt="Sate">
+                <p>Sate</p>
+            </button>
+            <button class="btn category-btn">
+                <img src="https://i.pinimg.com/originals/38/32/d5/3832d512b884906e6430ea8f0f5f49c4.jpg" alt="Bakso">
+                <p>Bakso</p>
+            </button>
+            <button class="btn category-btn">
+                <img src="https://th.bing.com/th/id/OIP.S--G37WUakVo1tr0BhFdFAHaE6?rs=1&pid=ImgDetMain" alt="Kopi">
+                <p>Kopi</p>
+            </button>
+            <button class="btn category-btn">
+                <img src="https://o-cdn-cas.sirclocdn.com/parenting/images/Selak_kerupak_basah.width-800.format-webp.webp" alt="Seblak">
+                <p>Seblak</p>
+            </button>
+        </div>
+
+        <!-- Featured Restaurants -->
+        <h5>Restoran Unggulan <a href="#" class="text-decoration-none">Lihat Lainnya</a></h5>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card restaurant-card">
+                    <img src="https://th.bing.com/th/id/OIP.NzSXtxNWD57kCe_7JuxC4wHaE8?rs=1&pid=ImgDetMain" alt="Nasi Goreng Ortega">
+                    <div class="card-body">
+                        <h6>Nasi Goreng Ortega</h6>
+                        <p class="text-muted">Gratis ongkir • 10-15 menit</p>
+                        <div class="d-flex justify-content-between">
+                            <span>⭐ 4.5 (75)</span>
+                            <a href="pesanan.html">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card restaurant-card">
+                    <img src="https://c1.staticflickr.com/1/714/23307734753_7109e06bbc_b.jpg" alt="Nasi Padang">
+                    <div class="card-body">
+                        <h6>Nasi Padang</h6>
+                        <p class="text-muted">Gratis ongkir • 10-15 menit</p>
+                        <div class="d-flex justify-content-between">
+                            <span>⭐ 4.7 (40)</span>
+                            <a href="pesanan.html ">Pesan Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Menu -->
+            <h5>Menu Populer</h5>
+                <div class="d-flex justify-content-around">
+                    <div class="Dimsum">
+                        <img src="https://cms.bolong.id/img/artikel/ilustrasi-dimsum-dl1g036siu.jpeg" alt="Dimsum" width="80" height="80" class="rounded">
+                        <p>Dimsum</p>
+                        <p>Rp. 15.000</p>
+                    </div>
+                    <div class="MieAyam">
+                        <img src="https://www.bing.com/th?id=OIP.5FzP6ilSP9SrJN0pSKF3ewHaHa&w=176&h=185&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2" alt="Mie Ayam" width="80" height="80" class="rounded">
+                        <p>Mie Ayam</p>
+                        <p>Rp. 8.000</p>
+                    </div>
+                    <div class="EsTeh">
+                        <img src="https://i.pinimg.com/originals/d4/73/ab/d473ab05be2a4c72423cd2adfa4a0631.jpg" alt="Menu Item" width="80" height="80" class="rounded">
+                        <p>Es Teh Jumbo</p>
+                        <p>Rp. 5.000</p>
+                    </div>
+                    <div class="Geprek">
+                        <img src="https://3.bp.blogspot.com/-CiMLKmOCYlc/Wfnec8igAQI/AAAAAAAAARE/Ly0CCrHeYX4PKeiDbovFtcB6c3k8dYh2QCEwYBhgL/s1600/membuat-ayam-geprek.jpg" alt="Menu Item" width="80" height="80" class="rounded">
+                        <p>Ayam Geprek</p>
+                        <p>Rp. 12.000</p>
+                    </div>
+                </div>
+            </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+        

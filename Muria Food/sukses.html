@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembayaran Berhasil</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .success-icon {
+            font-size: 100px; /* Ukuran ikon */
+            color: #ff4400; /* Warna hijau */
+            margin-top: 50px; /* Jarak atas */
+        }
+        .message {
+            margin-top: 20px;
+        }
+        .centered {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Mengisi tinggi viewport */
+        }
+    </style>
+</head>
+<body>
+
+<div class="container centered">
+    <div class="success-icon">
+        <i class="fas fa-check-circle"></i>
+    </div>
+    <h1>Pembayaran Berhasil!</h1>
+    <p class="message">Terima kasih telah melakukan pembayaran. Pesanan Anda akan diproses.</p>
+    <p>Nomor Pesanan: <strong>#123456789</strong></p>
+    <p>Total Pembayaran: <strong>Rp 500.000</strong></p>
+    <div class="text-center">
+         <a href="menu.html" class="btn btn-primary btn-block" type="button">Kembali ke Beranda</a>
+        <a href="lacak.html" class="btn btn-primary btn-block" type="button">Lacak Pesanan</a>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<style>
+    .btn-primary {
+        background-color: orange; /* Menambahkan warna oranye pada tombol */
+        border-color: orange; /* Mengubah border tombol menjadi oranye */
+    }
+</style>
